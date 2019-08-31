@@ -1,24 +1,48 @@
-# README
+# DB設計
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## Usersテーブル
 
-Things you may want to cover:
+|Column|Type|Options|
+|------|----|-------|
+|first_name|string|null: false|
+|first_name_kana|string|null: false|
+|last_name|string|null: false|
+|last_name_kana|string|null: false|
+|email|string|null: false, unique: true|
+|encrypted_password|string|null: false|
+|phone_number|integer|unique: true|
+|birthday|date||
+|sex|string|null: false|
+|height|integer|null: false|
+|weight|integer|null: false|
 
-* Ruby version
+### Association
+- has_many :records
+- has_many :foods
 
-* System dependencies
 
-* Configuration
+## Foodsテーブル
 
-* Database creation
+|Column|Type|Options|
+|------|----|-------|
+|name|integer|null: false|
+|kcal|integer|null: false|
+|protein|integer|null: false|
+|lipid|integer|null: false|
+|carbo|integer|null: false|
 
-* Database initialization
+### Association
+- belongs_to :user
+- belongs_to :record
 
-* How to run the test suite
 
-* Services (job queues, cache servers, search engines, etc.)
+## Recordsテーブル
 
-* Deployment instructions
+|Column|Type|Options|
+|------|----|-------|
+|user_id|references|null: false|
+|food_id|references|null: false|
 
-* ...
+### Association
+- belongs_to :user
+- has_many :foods
