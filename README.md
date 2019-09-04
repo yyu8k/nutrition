@@ -1,7 +1,6 @@
 # DB設計
 
 ## Usersテーブル
-
 |Column|Type|Options|
 |------|----|-------|
 |first_name|string|null: false|
@@ -21,8 +20,19 @@
 - has_many :foods
 
 
-## Foodsテーブル
+## Recordsテーブル
+|Column|Type|Options|
+|------|----|-------|
+|date|date|null: false|
+|user_id|references|null: false|
+|food_id|references|null: false|
 
+### Association
+- belongs_to :user
+- has_many :foods
+
+
+## Foodsテーブル
 |Column|Type|Options|
 |------|----|-------|
 |name|integer|null: false|
@@ -34,15 +44,3 @@
 ### Association
 - belongs_to :user
 - belongs_to :record
-
-
-## Recordsテーブル
-
-|Column|Type|Options|
-|------|----|-------|
-|user_id|references|null: false|
-|food_id|references|null: false|
-
-### Association
-- belongs_to :user
-- has_many :foods
