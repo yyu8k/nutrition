@@ -1,3 +1,4 @@
+.record-form
 = form_for @record do |f|
   - if @record.errors.any?
     #error_explanation
@@ -6,8 +7,9 @@
         - @record.errors.full_messages.each do |message|
           %li= message
 
-  .field
+  .record-form__field
     = f.label :date
     = f.date_select :date
-  .actions
+
+  .record-form__actions
     = f.submit 'Save'
