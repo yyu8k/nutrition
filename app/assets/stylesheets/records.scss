@@ -8,3 +8,95 @@
   left: 0;
   right: 0;
 }
+
+* {
+  margin: auto;
+  font-family: "San Francisco Display", "Helvetica Neue", "Hiragino Sans", ".HiraKakuInterface-W1", "游ゴシック", "YuGothic", "ヒラギノ角ゴ Pro W3", "HIragino Kaku Gothic Pro W3", "HIragino Kaku Gothic Pro", Osaka, "ＭＳ Ｐゴシック", "MS P Gothic", sans-serif;
+}
+
+.records-new {
+  max-width: 700px;
+  .records-new-header {
+      padding: 100px 16px 32px;
+      text-align: center;
+  }
+  .records-new-body {
+    padding: 40px 100px;
+    text-align: left;
+  }
+}
+
+#record_date_1i.year {
+  width: 80px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  height: 48px;
+  margin: 0;
+  padding: 0 10px;
+  border: 1px solid #ccc;
+  background-color: #fff;
+}
+#record_date_2i.month {
+  width: 120px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  height: 48px;
+  margin: 0;
+  padding: 0 10px;
+  border: 1px solid #ccc;
+  background-color: #fff;
+}
+#record_date_3i.day {
+  width: 80px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  height: 48px;
+  margin: 0;
+  padding: 0 10px;
+  border: 1px solid #ccc;
+  background-color: #fff;
+}
+
+.record-form__field {
+  &__date {
+    h1 {
+      font-size: 14px;
+    }  }
+  &__food {
+    h1 {
+      padding: 20px 0 0;
+      font-size: 14px;
+    }
+    .records_foods {
+      width: 265px;
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      appearance: none;
+      height: 48px;
+      margin: 0;
+      padding: 0 10px;
+      border: 1px solid #ccc;
+      background-color: #fff;
+    }
+  }
+}
+
+.record-form__actions {
+  text-align: center;
+  padding: 72px 0 0;
+  .records_save{
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    outline: none;
+    padding: 0;
+    appearance: none;
+    width: 100px;
+    background-color: black;
+    color: white;
+    height: 48px;
+  }
+}

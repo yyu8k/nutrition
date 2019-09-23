@@ -1,3 +1,4 @@
+.record-form
 = form_for @record do |f|
   - if @record.errors.any?
     #error_explanation
@@ -6,8 +7,13 @@
         - @record.errors.full_messages.each do |message|
           %li= message
 
-  .field
-    = f.label :date
-    = f.date_select :date
-  .actions
-    = f.submit 'Save'
+  .record-form__field
+    .record-form__field__date
+      %h1 Date
+      = f.date_select :date, {with_css_classes: true}
+    .record-form__field__food
+      %h1 Food
+      = f.text_field :food_id, class: "records_foods"
+
+  .record-form__actions
+    = f.submit 'Save', class: "records_save"
