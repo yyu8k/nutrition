@@ -8,3 +8,25 @@
   left: 0;
   right: 0;
 }
+
+* {
+  margin: 0px;
+  font-family: "San Francisco Display", "Helvetica Neue", "Hiragino Sans", ".HiraKakuInterface-W1", "游ゴシック", "YuGothic", "ヒラギノ角ゴ Pro W3", "HIragino Kaku Gothic Pro W3", "HIragino Kaku Gothic Pro", Osaka, "ＭＳ Ｐゴシック", "MS P Gothic", sans-serif;
+}
+.records-new {
+  min-width: 768px;
+  margin: 200px 400px;
+  justify-content: center;
+  .records-new-header {
+    h1 {
+      padding: 32px 16px;
+      text-align: center;
+    }
+  }
+  .records-new-body {
+
+  }
+  .records-new-footer {
+
+  }
+}
