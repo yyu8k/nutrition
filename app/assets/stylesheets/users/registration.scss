@@ -5,51 +5,80 @@
     text-align: center;
   }
   &__body {
-    padding: 40px 100px;
+    padding: 40px 100px 100px;
     text-align: left;
-    &__email {
-      font-weight: bold;
-      #user_email {
-        width: 460px;
-        -webkit-appearance: none;
-        -moz-appearance: none;
-        appearance: none;
-        height: 48px;
-        margin: 0;
-        padding: 0 10px;
-        border: 1px solid #ccc;
-        background-color: #fff;
-      }
+    .japanese {
+      size: 60px;
     }
-    &__password {
+    .half-field {
+      width: 180px;
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      appearance: none;
+      height: 48px;
+      margin: 5px 0 0;
+      padding: 0 10px;
+      border: 1px solid #ccc;
+      background-color: #fff;
+      border-radius: 0;
+    }
+    .full-field {
+      width: 300px;
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      appearance: none;
+      height: 48px;
+      margin: 5px 0 0;
+      padding: 0 10px;
+      border: 1px solid #ccc;
+      background-color: #fff;
+      border-radius: 0;
+    }
+    .label {
       padding: 20px 0 0;
       font-weight: bold;
-      #user_password {
-        width: 460px;
-        -webkit-appearance: none;
-        -moz-appearance: none;
-        appearance: none;
-        height: 48px;
-        margin: 0;
-        padding: 0 10px;
-        border: 1px solid #ccc;
-        background-color: #fff;
-      }
     }
-    &__password_confirmation {
-      padding: 20px 0 0;
-      font-weight: bold;
-      #user_password_confirmation {
-        width: 460px;
-        -webkit-appearance: none;
-        -moz-appearance: none;
-        appearance: none;
-        height: 48px;
-        margin: 0;
-        padding: 0 10px;
-        border: 1px solid #ccc;
-        background-color: #fff;
-      }
+    #user_first_name {
+      margin: 0 0 0 10px;
+    }
+    #user_first_name_kana {
+      margin: 0 0 0 10px;
+    }
+    #user_birthday_1i.year {
+      width: 80px;
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      appearance: none;
+      height: 48px;
+      margin: 5px 0 0;
+      padding: 0 10px;
+      border: 1px solid #ccc;
+      background-color: #fff;
+      border-radius: 0;
+    }
+    #user_birthday_2i.month {
+      width: 120px;
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      appearance: none;
+      height: 48px;
+      margin: 5px 0 0;
+      padding: 0 10px;
+      border: 1px solid #ccc;
+      background-color: #fff;
+      border-radius: 0;
+    }
+    #user_birthday_3i.day {
+      width: 80px;
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      appearance: none;
+      height: 48px;
+      margin: 5px 0 0;
+      padding: 0 10px;
+      border: 1px solid #ccc;
+      background-color: #fff;
+      border-radius: 0;
     }
     &__submit {
       text-align: center;
@@ -65,6 +94,7 @@
         background-color: black;
         color: white;
         height: 48px;
+        font-size: 16px;
       }
     }
   }
