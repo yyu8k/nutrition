@@ -4,22 +4,20 @@
   .devise-registration__body
     = form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f|
       = render "devise/shared/error_messages", resource: resource
-      .field
+      .devise-registration__body__email
         = f.label :email
-        %br/
         = f.email_field :email, autofocus: true, autocomplete: "email"
-      .field
+      .devise-registration__body__password
         = f.label :password
         - if @minimum_password_length
           %em
             (#{@minimum_password_length} characters minimum)
         %br/
         = f.password_field :password, autocomplete: "new-password"
-      .field
+      .devise-registration__body__password_confirmation
         = f.label :password_confirmation
-        %br/
         = f.password_field :password_confirmation, autocomplete: "new-password"
-      .actions
+      .devise-registration__body__submit
         = f.submit "Sign up"
   .devise-registration__footer
     = render "devise/shared/links"

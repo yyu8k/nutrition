@@ -7,6 +7,66 @@
   &__body {
     padding: 40px 100px;
     text-align: left;
+    &__email {
+      font-weight: bold;
+      #user_email {
+        width: 460px;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+        height: 48px;
+        margin: 0;
+        padding: 0 10px;
+        border: 1px solid #ccc;
+        background-color: #fff;
+      }
+    }
+    &__password {
+      padding: 20px 0 0;
+      font-weight: bold;
+      #user_password {
+        width: 460px;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+        height: 48px;
+        margin: 0;
+        padding: 0 10px;
+        border: 1px solid #ccc;
+        background-color: #fff;
+      }
+    }
+    &__password_confirmation {
+      padding: 20px 0 0;
+      font-weight: bold;
+      #user_password_confirmation {
+        width: 460px;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+        height: 48px;
+        margin: 0;
+        padding: 0 10px;
+        border: 1px solid #ccc;
+        background-color: #fff;
+      }
+    }
+    &__submit {
+      text-align: center;
+      padding: 72px 0 0;
+      input {
+        background-color: transparent;
+        border: none;
+        cursor: pointer;
+        outline: none;
+        padding: 0;
+        appearance: none;
+        width: 100px;
+        background-color: black;
+        color: white;
+        height: 48px;
+      }
+    }
   }
   &__footer {}
 }
