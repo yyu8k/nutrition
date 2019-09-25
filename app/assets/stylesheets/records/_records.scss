@@ -1,0 +1,56 @@
+#calendar {
+  margin: 0 auto;
+  width: 700px;
+  text-align: center;
+  position: fixed;
+  top: 100px;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.records-new {
+  max-width: 700px;
+  .records-new-header {
+      padding: 100px 16px 32px;
+      text-align: center;
+  }
+  .records-new-body {
+    padding: 40px 100px;
+    text-align: left;
+  }
+}
+
+#record_date_1i.year {
+  @include date-field;
+  width: 80px;
+}
+#record_date_2i.month {
+  @include date-field;
+  width: 120px;
+}
+#record_date_3i.day {
+  @include date-field;
+  width: 80px;
+}
+
+.record-form__field {
+  &__date {
+    h1 {
+      font-size: 14px;
+    }  }
+  &__food {
+    h1 {
+      padding: 20px 0 0;
+      font-size: 14px;
+    }
+    .records_foods {
+      @include input-form-field;
+      width: 266px;
+    }
+  }
+}
+
+.record-form__actions {
+  @include devise-submit-button;
+}

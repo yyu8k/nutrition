@@ -1,0 +1,48 @@
+.devise-registration {
+  max-width: 700px;
+  &__header {
+    padding: 100px 16px 32px;
+    text-align: center;
+  }
+  &__body {
+    padding: 40px 100px 100px;
+    text-align: left;
+    .japanese {
+      size: 60px;
+    }
+    .half-field {
+      @include input-form-field;
+      width: 180px;
+    }
+    .full-field {
+      @include input-form-field;
+      width: 300px;
+    }
+    .label {
+      padding: 20px 0 0;
+      font-weight: bold;
+    }
+    #user_first_name {
+      margin: 0 0 0 10px;
+    }
+    #user_first_name_kana {
+      margin: 0 0 0 10px;
+    }
+    #user_birthday_1i.year {
+      @include date-field;
+      width: 80px;
+    }
+    #user_birthday_2i.month {
+      @include date-field;
+      width: 120px;
+    }
+    #user_birthday_3i.day {
+      @include date-field;
+      width: 80px;
+    }
+    &__submit {
+      @include devise-submit-button;
+    }
+  }
+  &__footer {}
+}
