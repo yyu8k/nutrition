@@ -11,28 +11,12 @@
       size: 60px;
     }
     .half-field {
+      @include input-form-field;
       width: 180px;
-      -webkit-appearance: none;
-      -moz-appearance: none;
-      appearance: none;
-      height: 48px;
-      margin: 5px 0 0;
-      padding: 0 10px;
-      border: 1px solid #ccc;
-      background-color: #fff;
-      border-radius: 0;
     }
     .full-field {
+      @include input-form-field;
       width: 300px;
-      -webkit-appearance: none;
-      -moz-appearance: none;
-      appearance: none;
-      height: 48px;
-      margin: 5px 0 0;
-      padding: 0 10px;
-      border: 1px solid #ccc;
-      background-color: #fff;
-      border-radius: 0;
     }
     .label {
       padding: 20px 0 0;
