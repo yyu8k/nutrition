@@ -11,6 +11,7 @@
         = f.label :password
         %br/
         = f.password_field :password, autocomplete: "current-password", class: "full-field"
+      %br
       - if devise_mapping.rememberable?
         .field
           = f.check_box :remember_me
@@ -18,4 +19,4 @@
       .devise-session__body__login
         = f.submit "Log in"
   .devise-session__footer
-    = render "devise/shared/links"
+    -# = render "devise/shared/links"
