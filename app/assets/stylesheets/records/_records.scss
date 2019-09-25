@@ -22,37 +22,16 @@
 }
 
 #record_date_1i.year {
+  @include date-field;
   width: 80px;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  height: 48px;
-  margin: 0;
-  padding: 0 10px;
-  border: 1px solid #ccc;
-  background-color: #fff;
 }
 #record_date_2i.month {
+  @include date-field;
   width: 120px;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  height: 48px;
-  margin: 0;
-  padding: 0 10px;
-  border: 1px solid #ccc;
-  background-color: #fff;
 }
 #record_date_3i.day {
+  @include date-field;
   width: 80px;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  height: 48px;
-  margin: 0;
-  padding: 0 10px;
-  border: 1px solid #ccc;
-  background-color: #fff;
 }
 
 .record-form__field {
@@ -66,15 +45,8 @@
       font-size: 14px;
     }
     .records_foods {
-      width: 265px;
-      -webkit-appearance: none;
-      -moz-appearance: none;
-      appearance: none;
-      height: 48px;
-      margin: 0;
-      padding: 0 10px;
-      border: 1px solid #ccc;
-      background-color: #fff;
+      @include input-form-field;
+      width: 266px;
     }
   }
 }
