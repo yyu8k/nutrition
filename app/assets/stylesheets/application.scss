@@ -1,18 +1,22 @@
-@import "mixin";
-
-// users
-@import "users/registration";
-@import "users/session";
-
-// records
-@import "records/records";
-
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ 
+ *= require_tree .
+ *= require_self
+ *= require fullcalendar
+ */
+ 
 * {
   margin: auto;
   font-family: "San Francisco Display", "Helvetica Neue", "Hiragino Sans", ".HiraKakuInterface-W1", "游ゴシック", "YuGothic", "ヒラギノ角ゴ Pro W3", "HIragino Kaku Gothic Pro W3", "HIragino Kaku Gothic Pro", Osaka, "ＭＳ Ｐゴシック", "MS P Gothic", sans-serif;
 }
-
-
-//  *= require_tree .
-//  *= require_self
-//  *= require fullcalendar
