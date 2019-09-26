@@ -8,4 +8,14 @@
     = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload'
     = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
   %body
+    %header.header
+      %nav.global-nav
+        %ul.global-nav__list
+          %li.global-nav__item
+            %a{:href => ""} メニュー1
+      #js-hamburger.hamburger
+        %span.hamburger__line.hamburger__line--1
+        %span.hamburger__line.hamburger__line--2
+        %span.hamburger__line.hamburger__line--3
+      #js-black-bg.black-bg
     = yield
