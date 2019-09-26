@@ -22,6 +22,24 @@
   border-radius: 0;
 }
 
+@mixin submit-black-button {
+  text-align: center;
+  padding: 72px 0 0;
+  input {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    outline: none;
+    padding: 0;
+    appearance: none;
+    width: 100px;
+    background-color: black;
+    color: white;
+    height: 48px;
+    font-size: 16px;
+  }
+}
+
 .devise-registration {
   max-width: 700px;
   &__header {
@@ -65,7 +83,7 @@
       width: 80px;
     }
     &__submit {
-      @include devise-submit-button;
+      @include submit-black-button;
     }
   }
   &__footer {}
