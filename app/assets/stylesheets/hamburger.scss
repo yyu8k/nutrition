@@ -13,11 +13,30 @@
   top: 0;
   width: 300px; /* スマホに収まるくらい */
   height: 100vh;
-  padding-top: 40px;
+  padding: 40px 0;
   background-color: #fff;
   transition: all .6s;
   z-index: 200;
-  overflow-y: auto; /* メニューが多くなったらスクロールできるように */
+  // overflow-y: auto; /* メニューが多くなったらスクロールできるように */
+  &__list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    &__item {
+      text-align: center;
+      padding: 0 14px;
+    }
+    &__item a {
+      display: block;
+      padding: 8px 0;
+      border-bottom: 1px solid #eee;
+      text-decoration: none;
+      color: #111;
+    }
+    &__item a:hover {
+      background-color: #eee;
+    }
+  }
 }
 .hamburger {
   position: absolute;
@@ -28,25 +47,7 @@
   cursor: pointer;
   z-index: 300;
 }
-.global-nav__list {
-  margin: 0;
-  padding: 0;
-  list-style: none;
-}
-.global-nav__item {
-  text-align: center;
-  padding: 0 14px;
-}
-.global-nav__item a {
-  display: block;
-  padding: 8px 0;
-  border-bottom: 1px solid #eee;
-  text-decoration: none;
-  color: #111;
-}
-.global-nav__item a:hover {
-  background-color: #eee;
-}
+
 .hamburger__line {
   position: absolute;
   left: 11px;
