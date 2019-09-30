@@ -13,6 +13,7 @@
         %ul.global-nav__list
           %li.global-nav__item
             = link_to "new records", new_record_path
+            = link_to "logout", destroy_user_session_path, method: :delete
       #js-hamburger.hamburger
         %span.hamburger__line.hamburger__line--1
         %span.hamburger__line.hamburger__line--2
