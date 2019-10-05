@@ -9,11 +9,18 @@
     = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
   %body
     %header.header
-      %nav.global-nav
-        %ul.global-nav__list
-          %li.global-nav__item
-            = link_to "new records", new_record_path
-            = link_to "logout", destroy_user_session_path, method: :delete
+      .global-nav
+        .global-nav__list
+          .global-nav__list__item
+            - if user_signed_in?
+              = link_to "new records", new_record_path
+              = link_to "logout", destroy_user_session_path, method: :delete
+            - else
+              .global-nav__item__sign_up
+                = link_to "sign up", new_user_registration_path
+              .global-nav__item__sign_in
+              
+                = link_to "sign in", new_user_session_path
       #js-hamburger.hamburger
         %span.hamburger__line.hamburger__line--1
         %span.hamburger__line.hamburger__line--2
