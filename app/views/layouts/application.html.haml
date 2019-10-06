@@ -21,6 +21,8 @@
               = link_to "new records", new_record_path
               = link_to "logout", destroy_user_session_path, method: :delete
             - else
+              .current_user
+                こんにちは、 ゲスト さん
               .global-nav__item__sign_up
                 = link_to "sign up", new_user_registration_path
               .global-nav__item__sign_in
