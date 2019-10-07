@@ -19,6 +19,7 @@
                 =current_user.first_name
                 さん
               = link_to "new records", new_record_path
+              = link_to "edit your info", edit_user_registration_path
               = link_to "logout", destroy_user_session_path, method: :delete
             - else
               .current_user
