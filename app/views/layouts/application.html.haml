@@ -9,10 +9,26 @@
     = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
   %body
     %header.header
-      %nav.global-nav
-        %ul.global-nav__list
-          %li.global-nav__item
-            = link_to "new records", new_record_path
+      .global-nav
+        .global-nav__list
+          .global-nav__list__item
+            - if user_signed_in?
+              .current_user
+                こんにちは、
+                =current_user.last_name
+                =current_user.first_name
+                さん
+              = link_to "記録をする", new_record_path
+              = link_to "ユーザー情報を編集する", edit_user_registration_path
+              = link_to "HOME", root_path
+              = link_to "ログアウト", destroy_user_session_path, method: :delete
+            - else
+              .current_user
+                こんにちは、 ゲスト さん
+              .global-nav__item__sign_up
+                = link_to "新規登録", new_user_registration_path
+              .global-nav__item__sign_in
+                = link_to "ログイン", new_user_session_path
       #js-hamburger.hamburger
         %span.hamburger__line.hamburger__line--1
         %span.hamburger__line.hamburger__line--2

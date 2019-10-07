@@ -20,4 +20,10 @@
 
 -# = link_to 'New Record', new_record_path
 
-#calendar
+- if user_signed_in?
+  #calendar
+
+- else
+  .top-page
+    .top-page__message
+      こんにちは

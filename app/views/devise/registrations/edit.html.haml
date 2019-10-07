@@ -1,36 +1,63 @@
-%h2
-  Edit #{resource_name.to_s.humanize}
-= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f|
-  = render "devise/shared/error_messages", resource: resource
-  .field
-    = f.label :email
-    %br/
-    = f.email_field :email, autofocus: true, autocomplete: "email"
-  - if devise_mapping.confirmable? && resource.pending_reconfirmation?
-    %div
-      Currently waiting confirmation for: #{resource.unconfirmed_email}
-  .field
-    = f.label :password
-    %i (leave blank if you don't want to change it)
-    %br/
-    = f.password_field :password, autocomplete: "new-password"
-    - if @minimum_password_length
-      %br/
-      %em
-        = @minimum_password_length
-        characters minimum
-  .field
-    = f.label :password_confirmation
-    %br/
-    = f.password_field :password_confirmation, autocomplete: "new-password"
-  .field
-    = f.label :current_password
-    %i (we need your current password to confirm your changes)
-    %br/
-    = f.password_field :current_password, autocomplete: "current-password"
-  .actions
-    = f.submit "Update"
-%h3 Cancel my account
-%p
-  Unhappy? #{button_to "Cancel my account", registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete}
-= link_to "Back", :back
+.devise-edit
+  .devise-edit__header
+    %h2 Edit 
+    %h3 #{resource_name.to_s.humanize}
+  .devise-edit__body
+    = form_with model: @user, as: resource_name, url: registration_path(resource_name), local: true, class: "registration_form" do |f|
+      = render "devise/shared/error_messages", resource: resource
+      %label.label email
+      %br
+      = f.email_field(:email, autofocus: true, class: "full-field", autocomplete: "email")
+      - if devise_mapping.confirmable? && resource.pending_reconfirmation?
+        %div
+          Currently waiting confirmation for: #{resource.unconfirmed_email}
+      %br
+      %br
+      %label.label new password
+      %i （変更がない場合は空白）
+      %br
+      = f.password_field(:password, class: "full-field", autocomplete: "new-password")
+      - if @minimum_password_length
+        %br
+        %br
+        %label.label new password*
+        %br
+        = f.password_field :password_confirmation, class: "full-field", autocomplete: "new-password"
+        %br
+        %br
+        %label.label name
+        %br
+        = f.text_field(:last_name, class: "half-field", placeholder: "例）山田")
+        = f.text_field(:first_name, class: "half-field", placeholder: "例）太郎")
+        %br
+        %br
+        %label.label name kana
+        %br
+        = f.text_field(:last_name_kana, class: "half-field", placeholder: "例）ヤマダ")
+        = f.text_field(:first_name_kana, class: "half-field", placeholder: "例）タロウ")
+        %br
+        %br
+        %label.label phone number
+        %br
+        = f.text_field(:phone_number, class: "full-field", placeholder: "ハイフンなし")
+        %br
+        %br
+        %label.label height, weight
+        %br
+        = f.text_field(:height, class: "half-field", placeholder: "身長 cm")
+        = f.text_field(:weight, class: "half-field", placeholder: "体重 kg")
+        %br
+        %br
+        = f.label :current_password
+        %i （変更するには現在のパスワードを入力）
+        %br/
+        = f.password_field :current_password, class: "full-field", autocomplete: "current-password"
+      .devise-edit__body__submit
+        = f.submit "Update"
+    -# %h3 Cancel my account
+    -# %p
+    -#   Unhappy? #{button_to "Cancel my account", registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete}
+    -# = link_to "Back", :back
+
+
+-# = form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f|

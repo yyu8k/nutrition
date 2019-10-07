@@ -18,5 +18,31 @@
  
 * {
   margin: auto;
-  font-family: "San Francisco Display", "Helvetica Neue", "Hiragino Sans", ".HiraKakuInterface-W1", "游ゴシック", "YuGothic", "ヒラギノ角ゴ Pro W3", "HIragino Kaku Gothic Pro W3", "HIragino Kaku Gothic Pro", Osaka, "ＭＳ Ｐゴシック", "MS P Gothic", sans-serif;
+  font-family: 'Sawarabi Mincho', sans-serif;
+}
+
+.top-page{
+  background: image-url('trees.jpg');
+  background-size: cover;
+  display: flex;
+  background-size:cover;
+  height: 100vh;
+  &__message {
+    color: white;
+    font-weight: normal;
+    font-size: 60px;
+    text-align: center;
+    // アニメーション設定
+    animation: fadeIn 4s ease 0s 1 normal;
+    -webkit-animation: fadeIn 4s ease 0s 1 normal;
+  }
+}
+@keyframes fadeIn {
+  0% {opacity: 0}
+  100% {opacity: 1}
+}
+
+@-webkit-keyframes fadeIn {
+  0% {opacity: 0}
+  100% {opacity: 1}
 }
