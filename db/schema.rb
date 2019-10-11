@@ -12,15 +12,6 @@
 
 ActiveRecord::Schema.define(version: 2019_10_09_112950) do
 
-  create_table "record_foods", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
-    t.bigint "record_id"
-    t.bigint "food_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.index ["food_id"], name: "index_record_foods_on_food_id"
-    t.index ["record_id"], name: "index_record_foods_on_record_id"
-  end
-
   create_table "foods", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "name"
     t.integer "kcal"
@@ -29,6 +20,15 @@ ActiveRecord::Schema.define(version: 2019_10_09_112950) do
     t.integer "carbo"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "record_foods", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.bigint "record_id"
+    t.bigint "food_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["food_id"], name: "index_record_foods_on_food_id"
+    t.index ["record_id"], name: "index_record_foods_on_record_id"
   end
 
   create_table "records", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
