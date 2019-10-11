@@ -90,6 +90,25 @@
       @include input-form-field;
       width: 266px;
     }
+    #food-search-result {
+      font-size: 12px;
+      .redords-food.clearfix {
+        width: 270px;
+        margin: 10px 5px;
+        &:after {
+          content: "";
+          clear: both;
+          display: block;
+        }
+        .redords-food__name {
+          float: left;
+        }
+        .food-search-add {
+          float: right;
+          color: #8b4513;
+        }
+      }
+    }
   }
 }
 
