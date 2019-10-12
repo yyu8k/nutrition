@@ -25,20 +25,46 @@
   background: image-url('trees.jpg');
   background-size: cover;
   display: flex;
-  background-size:cover;
   height: 100vh;
   &__message {
+    text-align: center;
     // アニメーション設定
     animation: fadeIn 4s ease 0s 1 normal;
     -webkit-animation: fadeIn 4s ease 0s 1 normal;
     color: white;
-    .h1 {
+    &__title {
       font-weight: normal;
       font-size: 60px;
+    }
+    &__text {
+      h1 {
+        font-weight: normal;
+        font-size: 30px;
+        text-align: left;
+      }
+    }
+    &__link {
       text-align: center;
+      margin: 60px 0 0;
+      display: flex;
+      h2 {
+        font-weight: normal;
+        border: solid 1px white;
+        padding: 10px 50px;
+        color: white;
+        background-color: rgba(0,0,0,0.7);
+        a {
+          text-decoration: none;
+          color: white;
+        }
+        a:hover {
+            opacity: 0.7;
+        }
+      }
     }
   }
 }
+
 @keyframes fadeIn {
   0% {opacity: 0}
   100% {opacity: 1}
