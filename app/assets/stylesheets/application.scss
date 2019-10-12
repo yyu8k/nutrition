@@ -18,7 +18,7 @@
  
 * {
   margin: auto;
-  font-family: 'Sawarabi Mincho', sans-serif;
+  font-family: "游明朝", YuMincho, "ヒラギノ明朝 ProN W3", "Hiragino Mincho ProN", "HG明朝E", "ＭＳ Ｐ明朝", "ＭＳ 明朝", serif;
 }
 
 .top-page{
@@ -28,13 +28,15 @@
   background-size:cover;
   height: 100vh;
   &__message {
-    color: white;
-    font-weight: normal;
-    font-size: 60px;
-    text-align: center;
     // アニメーション設定
     animation: fadeIn 4s ease 0s 1 normal;
     -webkit-animation: fadeIn 4s ease 0s 1 normal;
+    color: white;
+    .h1 {
+      font-weight: normal;
+      font-size: 60px;
+      text-align: center;
+    }
   }
 }
 @keyframes fadeIn {
