@@ -1,0 +1,50 @@
+.profile-page {
+  background-color: black;
+  background: image-url('trees.jpg');
+  background-size: cover;
+  display: flex;
+  height: 100vh;
+  &__index {
+    background-color: black;
+    opacity: 0.8;
+    z-index: 0;
+    overflow: scroll;
+    margin: 80px 40px 40px;
+    padding: 30px;
+    width: calc(100% - 20px);
+    color: white;
+    &__header {
+      height: 80px;
+      display: table-cell;
+      vertical-align: middle;
+      h1 {
+        font-size: 30px;
+      }
+    }
+    &__body {
+      padding: 20px;
+      &__top {
+        h2 {
+          font-size: 22px;
+        }
+        &__text {
+          padding: 0 0 40px;
+          h3 {
+            padding: 5px;
+            font-weight: normal;
+          }
+        }
+        &__profile {
+          padding: 40px 0 0;
+        }
+      }
+    }
+    &__footer {
+      padding: 80px 20px 20px;
+      a {
+        color: white;
+        font-size: 22px;
+      }
+    }
+  }
+}
