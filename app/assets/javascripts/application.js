@@ -31,6 +31,6 @@ $(function () {
   $(document).on('turbolinks:before-cache', clearCalendar);
 
   $('#calendar').fullCalendar({
-  events: '/events.json'
+  records: '/records.json'
   });
 });
