@@ -31,7 +31,6 @@ $(document).on('turbolinks:load', function(){
 
   $("#food-search-field").on("input", function() {
     var input = $("#food-search-field").val();
-    // console.log('わーい');
     $.ajax({
       type: 'GET',
       url: '/foods',
@@ -39,7 +38,6 @@ $(document).on('turbolinks:load', function(){
       dataType: 'json'
     })
     .done(function(foods){
-      console.log(foods);
       $("#food-search-result").empty();
       if (foods.length !== 0) {
         foods.forEach(function(food){
