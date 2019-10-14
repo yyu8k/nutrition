@@ -31,6 +31,7 @@ $(document).on('turbolinks:load', function(){
 
   $("#food-search-field").on("input", function() {
     var input = $("#food-search-field").val();
+    if (input.length !== 0) {
     $.ajax({
       type: 'GET',
       url: '/foods',
@@ -51,6 +52,9 @@ $(document).on('turbolinks:load', function(){
     .fail(function(){
       alert('食品検索に失敗しました');
     })
+    } else {
+      $("#food-search-result").empty();
+    }
   });
 
   $('#food-search-result').on('click', '.food-search-add', function() {
