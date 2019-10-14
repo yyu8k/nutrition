@@ -19,7 +19,13 @@ $(document).on('turbolinks:load', function(){
 
   function appendMemberHTML(id, name) {
     var html =
-    ``
+    `
+    <div class="record-form__field__add clearfix js-record-foods" id="${ id }">
+    <input name='record[food_ids][]' type='hidden' value=${ id }>
+    <p class="redords-food__name">${ name }</p>
+    <a class="food-search-remove chat-event-food__btn chat-event-food__btn--remove js-remove-btn">削除</a>
+    </div>
+    `
     return html;
   }
 
@@ -54,7 +60,7 @@ $(document).on('turbolinks:load', function(){
     var id = $(this).data('food-id');
     var name = $(this).data('food-name');
     var html = appendMemberHTML(id, name);
-    $('#chat-event-foods').append(html);
+    $('#redords-foods').append(html);
   });
 
   $(document).on('click', '.food-search-remove', function() {
