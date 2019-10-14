@@ -16,13 +16,9 @@
       = f.text_field :food_id, class: "records_foods", id: "food-search-field", value: ""
       #food-search-result
     .record-form__field__result
+      %h1 Ate
+    .record-form__field__add.clearfix.js-record-foods
     #redords-foods
-      -# - @record.foods.each do |food|
-      -#   - if gohan.name != current_food.name
-      -#     .redords-food.clearfix
-      -#       %input{name: "record[food_ids][]", type: "hidden", value: food.id}/
-      -#       %p.redords-food__name= food.name
-      -#       %a.gohan-search-remove.redords-food__btn.redords-food__btn--remove.js-remove-btn 削除
 
   .record-form__actions
     = f.submit 'Save', class: "records_save"
