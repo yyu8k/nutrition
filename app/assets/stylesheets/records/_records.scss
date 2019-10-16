@@ -80,7 +80,8 @@
   &__date {
     h1 {
       font-size: 14px;
-    }  }
+    }
+  }
   &__food {
     h1 {
       padding: 20px 0 0;
@@ -110,8 +111,38 @@
       }
     }
   }
+  &__result {
+    h1 {
+      padding: 20px 0 0;
+      font-size: 14px;
+    }
+  }
+  .record-form__field__add.clearfix {
+    width: 270px;
+    margin: 10px 5px;
+    font-size: 12px;
+    &:after {
+      content: "";
+      clear: both;
+      display: block;
+    }
+    .redords-food__name {
+      float: left;
+    }
+    .food-search-remove {
+      float: right;
+      color: #708090;
+    }
+  }
 }
 
 .record-form__actions {
   @include submit-black-button;
+}
+
+.record-show {
+  margin: 100px 400px;
+  &__date {
+    font-size: 26px;
+  }
 }
