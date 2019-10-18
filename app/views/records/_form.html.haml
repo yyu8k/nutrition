@@ -13,7 +13,7 @@
       = f.date_select(:date, {with_css_classes: true})
     .record-form__field__food
       %h1 Food
-      = f.text_field(:food_id, class: "records_foods", id: "food-search-field", value: "", prompt: true)
+      = f.text_field(:food_id, class: "records_foods", id: "food-search-field", local: true, prompt: true, value: "")
       #food-search-result
     .record-form__field__result
       %h1 Ate
