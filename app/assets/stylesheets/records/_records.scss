@@ -145,4 +145,10 @@
   &__date {
     font-size: 26px;
   }
+  &__food {
+    padding: 10px 20px;
+    &__name {
+      margin: 10px 5px;
+    }
+  }
 }
