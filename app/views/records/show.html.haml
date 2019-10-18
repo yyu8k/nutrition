@@ -1,3 +1,8 @@
 .record-show
   .record-show__date
     = @record.date.strftime("%Y/%-m/%-d")
+  .record-show__food
+    - @record.foods.each do |food|
+      = food.name
+      %br
+
