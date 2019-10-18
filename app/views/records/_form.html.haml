@@ -1,5 +1,5 @@
 .record-form
-= form_for @record do |f|
+= form_with model: @record, local: true,class: "registration_form" do |f|
   - if @record.errors.any?
     #error_explanation
       %h2= "#{pluralize(@record.errors.count, "error")} prohibited this record from being saved:"
@@ -10,19 +10,18 @@
   .record-form__field
     .record-form__field__date
       %h1 Date
-      = f.date_select :date, {with_css_classes: true}
+      = f.date_select(:date, {with_css_classes: true})
     .record-form__field__food
       %h1 Food
-      = f.text_field :food_id, class: "records_foods", id: "food-search-field", value: ""
+      = f.text_field(:food_id, class: "records_foods", id: "food-search-field", local: true, prompt: true, value: "")
       #food-search-result
     .record-form__field__result
+      %h1 Ate
+    .record-form__field__add.clearfix.js-record-foods
     #redords-foods
-      -# - @record.foods.each do |food|
-      -#   - if gohan.name != current_food.name
-      -#     .redords-food.clearfix
-      -#       %input{name: "record[food_ids][]", type: "hidden", value: food.id}/
-      -#       %p.redords-food__name= food.name
-      -#       %a.gohan-search-remove.redords-food__btn.redords-food__btn--remove.js-remove-btn 削除
+      -# - @food.each do |food|
+      -#   #redords-foods
+      -#     = f.hidden_field :food, name: 'record[][]', value: food.id
 
   .record-form__actions
     = f.submit 'Save', class: "records_save"

@@ -19,13 +19,19 @@ $(document).on('turbolinks:load', function(){
 
   function appendMemberHTML(id, name) {
     var html =
-    ``
+    `
+    <div class="record-form__field__add clearfix js-record-foods" id="${ id }">
+    <input name='record[food_ids][]' type='hidden' value=${ id }>
+    <p class="redords-food__name">${ name }</p>
+    <a class="food-search-remove chat-event-food__btn chat-event-food__btn--remove js-remove-btn">削除</a>
+    </div>
+    `
     return html;
   }
 
   $("#food-search-field").on("input", function() {
     var input = $("#food-search-field").val();
-    // console.log('わーい');
+    if (input.length !== 0) {
     $.ajax({
       type: 'GET',
       url: '/foods',
@@ -33,7 +39,6 @@ $(document).on('turbolinks:load', function(){
       dataType: 'json'
     })
     .done(function(foods){
-      console.log(foods);
       $("#food-search-result").empty();
       if (foods.length !== 0) {
         foods.forEach(function(food){
@@ -47,6 +52,9 @@ $(document).on('turbolinks:load', function(){
     .fail(function(){
       alert('食品検索に失敗しました');
     })
+    } else {
+      $("#food-search-result").empty();
+    }
   });
 
   $('#food-search-result').on('click', '.food-search-add', function() {
@@ -54,7 +62,7 @@ $(document).on('turbolinks:load', function(){
     var id = $(this).data('food-id');
     var name = $(this).data('food-name');
     var html = appendMemberHTML(id, name);
-    $('#chat-event-foods').append(html);
+    $('#redords-foods').append(html);
   });
 
   $(document).on('click', '.food-search-remove', function() {

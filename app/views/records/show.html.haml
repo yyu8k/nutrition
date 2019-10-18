@@ -1,9 +1,9 @@
-%p#notice= notice
+.record-show
+  .record-show__date
+    = @record.date.strftime("%Y/%-m/%-d")
+  .record-show__food
+    - @record.foods.each do |food|
+      .record-show__food__name
+      = food.name
+      %br
 
-%p
-  %b Date:
-  = @record.date
-
-= link_to 'Edit', edit_record_path(@record)
-\|
-= link_to 'Back', records_path
