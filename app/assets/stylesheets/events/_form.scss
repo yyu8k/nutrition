@@ -14,3 +14,9 @@
   @include date-field;
   width: 80px;
 }
+
+#event_start_date_2i.month {
+  @include date-field;
+  width: 120px;
+}
+
