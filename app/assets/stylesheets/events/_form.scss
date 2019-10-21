@@ -43,4 +43,25 @@
       font-size: 14px;
     }
   }
+  &__food {
+    h1 {
+      padding: 20px 0 0;
+      font-size: 14px;
+    }
+    .events_foods {
+      @include input-form-field;
+      width: 270px;
+    }
+    #food-search-result {
+      font-size: 12px;
+    }
+  }
+  &__result {
+    h1 {
+      padding: 20px 0 0;
+      font-size: 14px;
+    }
+  }
 }
+
+.events-form__actions {}
