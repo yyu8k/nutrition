@@ -1,0 +1,2 @@
+class EventFood < ApplicationRecord
+end
