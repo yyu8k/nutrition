@@ -1,3 +1,7 @@
 .events-new {
   max-width: 700px;
+  &__header {
+    padding: 100px 16px 32px;
+    text-align: center;
+  }
 }
