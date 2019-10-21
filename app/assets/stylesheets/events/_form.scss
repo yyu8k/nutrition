@@ -10,6 +10,18 @@
   border-radius: 0;
 }
 
+@mixin input-form-field {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  height: 48px;
+  margin: 5px 0 0;
+  padding: 0 10px;
+  border: 1px solid #ccc;
+  background-color: #fff;
+  border-radius: 0;
+}
+
 #event_start_date_1i.year {
   @include date-field;
   width: 80px;
