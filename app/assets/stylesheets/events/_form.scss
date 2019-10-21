@@ -20,3 +20,7 @@
   width: 120px;
 }
 
+#event_start_date_3i.day {
+  @include date-field;
+  width: 80px;
+}
