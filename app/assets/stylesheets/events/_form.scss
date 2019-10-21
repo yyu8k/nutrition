@@ -24,3 +24,11 @@
   @include date-field;
   width: 80px;
 }
+
+.events-form__field {
+  &__date {
+    h1 {
+      font-size: 14px;
+    }
+  }
+}
