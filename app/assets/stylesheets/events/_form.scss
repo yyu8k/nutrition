@@ -9,3 +9,8 @@
   background-color: #fff;
   border-radius: 0;
 }
+
+#event_start_date_1i.year {
+  @include date-field;
+  width: 80px;
+}
