@@ -3,6 +3,7 @@ class EventsController < ApplicationController
 
   def index
     @events = Event.all
+    @foods = Food.all
   end
 
   def show
@@ -10,6 +11,7 @@ class EventsController < ApplicationController
 
   def new
     @event = Event.new
+    @foods = Food.new(params[:food_id])
   end
 
   def edit
@@ -17,6 +19,7 @@ class EventsController < ApplicationController
 
   def create
     @event = Event.new(event_params)
+    @foods = Food.all
 
     respond_to do |format|
       if @event.save
@@ -56,7 +59,7 @@ class EventsController < ApplicationController
     end
 
     def event_params
-      params.require(:event).permit(:title, :description, :start_date, :end_date)
+      params.require(:event).permit(:start_date, {food_ids: []}).merge(user_id: current_user.id)
     end
 
 end
