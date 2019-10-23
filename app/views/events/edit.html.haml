@@ -1,7 +1,6 @@
-%h1 Editing event
-
-= render 'form'
-
-= link_to 'Show', @event
-\|
-= link_to 'Back', events_path
+.events-edit
+  .events-edit__header
+    %h1 New Record
+  .events-edit__body
+    = render 'form'
+  .events-edit__footer
