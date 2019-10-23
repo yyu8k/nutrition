@@ -1,9 +1,27 @@
 .events-show {
+  max-width: 700px;
   margin: 100px 400px;
   &__date {
+    position: relative;
     font-size: 26px;
+    .events-edit {
+      display: inline-block;
+      position: absolute;
+      font-size: 18px;
+      right: 0;
+      text-decoration: none;
+      color: white;
+      background-color: #262626;
+      padding: 2px 10px;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+    a:hover {
+      opacity: 0.7;
+    }
   }
   &__food {
+    min-width: 700px;
     padding: 10px 20px;
     &__name {
       margin: 10px 5px;
