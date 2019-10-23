@@ -9,6 +9,10 @@
   right: 0;
 }
 
+.fc-time{
+  display : none;
+}
+
 @mixin input-form-field {
   -webkit-appearance: none;
   -moz-appearance: none;
