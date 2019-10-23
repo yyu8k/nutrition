@@ -10,7 +10,11 @@
 }
 
 .fc-time{
-  display: none;
+   display : none;
+}
+
+.fc-sun, .fc-sat {
+  background-color: #f5f5f5;
 }
 
 @mixin input-form-field {
