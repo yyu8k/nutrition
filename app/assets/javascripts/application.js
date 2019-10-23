@@ -33,6 +33,6 @@ $(function () {
   $('#calendar').fullCalendar({
   events: '/events.json',
   //イベントの色を変える
-  eventColor: '#2f4f4f'
+  eventColor: '#5f9ea0'
   });
 });
