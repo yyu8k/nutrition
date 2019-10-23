@@ -62,7 +62,7 @@ $(document).on('turbolinks:load', function(){
     var id = $(this).data('food-id');
     var name = $(this).data('food-name');
     var html = appendMemberHTML(id, name);
-    $('#events-foods').append(html);
+    $('#event-foods').append(html);
   });
 
   $(document).on('click', '.food-search-remove', function() {

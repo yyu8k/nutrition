@@ -13,12 +13,12 @@
       = f.date_select(:start_date, {with_css_classes: true})
     .event-form__field__food
       %h1 Food
-      = f.text_field(:food_id, class: "events_foods", id: "food-search-field", local: true, prompt: true, value: "")
+      = f.text_field(:food_id, class: "event_foods", id: "food-search-field", local: true, prompt: true, value: "")
       #food-search-result
     .event-form__field__result
       %h1 Ate
     .event-form__field__add.clearfix.js-event-foods
-    #events-foods
+    #event-foods
 
   .event-form__actions
     = f.submit 'Save', class: "events_save"
