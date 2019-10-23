@@ -3,9 +3,9 @@ $(document).on('turbolinks:load', function(){
   function appendHTML(food) {
     var html =
     `
-    <div class="redords-food clearfix">
-    <p class="redords-food__name">${ food.name }</p>
-    <div class="food-search-add redords-food__btn redords-food__btn--add" data-food-id="${food.id}" data-food-name="${food.name}">追加</div>
+    <div class="events-food clearfix">
+    <p class="events-food__name">${ food.name }</p>
+    <div class="food-search-add events-food__btn events-food__btn--add" data-food-id="${food.id}" data-food-name="${food.name}">追加</div>
     </div>
     `
     $('#food-search-result').append(html);
@@ -20,9 +20,9 @@ $(document).on('turbolinks:load', function(){
   function appendMemberHTML(id, name) {
     var html =
     `
-    <div class="record-form__field__add clearfix js-record-foods" id="${ id }">
-    <input name='record[food_ids][]' type='hidden' value=${ id }>
-    <p class="redords-food__name">${ name }</p>
+    <div class="event-form__field__add clearfix js-event-foods" id="${ id }">
+    <input name='event[food_ids][]' type='hidden' value=${ id }>
+    <p class="events-food__name">${ name }</p>
     <a class="food-search-remove chat-event-food__btn chat-event-food__btn--remove js-remove-btn">削除</a>
     </div>
     `
@@ -62,7 +62,7 @@ $(document).on('turbolinks:load', function(){
     var id = $(this).data('food-id');
     var name = $(this).data('food-name');
     var html = appendMemberHTML(id, name);
-    $('#redords-foods').append(html);
+    $('#events-foods').append(html);
   });
 
   $(document).on('click', '.food-search-remove', function() {
