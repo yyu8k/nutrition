@@ -3,9 +3,9 @@ $(document).on('turbolinks:load', function(){
   function appendHTML(food) {
     var html =
     `
-    <div class="events-food clearfix">
-    <p class="events-food__name">${ food.name }</p>
-    <div class="food-search-add events-food__btn events-food__btn--add" data-food-id="${food.id}" data-food-name="${food.name}">追加</div>
+    <div class="event-food clearfix">
+    <p class="event-food__name">${ food.name }</p>
+    <div class="food-search-add event-food__btn event-food__btn--add" data-food-id="${food.id}" data-food-name="${food.name}">追加</div>
     </div>
     `
     $('#food-search-result').append(html);
@@ -22,7 +22,7 @@ $(document).on('turbolinks:load', function(){
     `
     <div class="event-form__field__add clearfix js-event-foods" id="${ id }">
     <input name='event[food_ids][]' type='hidden' value=${ id }>
-    <p class="events-food__name">${ name }</p>
+    <p class="event-food__name">${ name }</p>
     <a class="food-search-remove chat-event-food__btn chat-event-food__btn--remove js-remove-btn">削除</a>
     </div>
     `
