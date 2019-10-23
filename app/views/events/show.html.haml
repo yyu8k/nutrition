@@ -1,0 +1,8 @@
+.events-show
+  .events-show__date
+    = @event.start_date.strftime("%Y/%-m/%-d")
+  .events-show__food
+    - @event.foods.each do |food|
+      .events-show__food__name
+      = food.name
+      %br
