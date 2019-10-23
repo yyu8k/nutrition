@@ -31,6 +31,8 @@ $(function () {
   $(document).on('turbolinks:before-cache', clearCalendar);
 
   $('#calendar').fullCalendar({
-  events: '/events.json'
+  events: '/events.json',
+  //イベントの色を変える
+  eventColor: '#2f4f4f'
   });
 });
