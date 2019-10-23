@@ -55,7 +55,7 @@
   width: 80px;
 }
 
-.events-form__field {
+.event-form__field {
   &__date {
     h1 {
       font-size: 14px;
@@ -66,7 +66,7 @@
       padding: 20px 0 0;
       font-size: 14px;
     }
-    .events_foods {
+    .event_foods {
       @include input-form-field;
       width: 270px;
     }
@@ -80,6 +80,23 @@
       font-size: 14px;
     }
   }
+  .event-food.clearfix {
+    width: 270px;
+    margin: 10px 5px;
+    font-size: 12px;
+    &:after {
+      content: "";
+      clear: both;
+      display: block;
+    }
+    .event-food__name {
+      float: left;
+    }
+    .food-search-add {
+      float: right;
+      color: #708090;
+    }
+  }
   .event-form__field__add.clearfix {
     width: 270px;
     margin: 10px 5px;
@@ -89,16 +106,16 @@
       clear: both;
       display: block;
     }
-    .events-food__name {
+    .event-food__name {
       float: left;
     }
     .food-search-remove {
       float: right;
-      color: #708090;
+      color: #8b4513;
     }
   }
 }
 
-.events-form__actions {
+.event-form__actions {
   @include submit-black-button;
 }
