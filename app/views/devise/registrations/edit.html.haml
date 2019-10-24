@@ -27,14 +27,16 @@
         %br
         %label.label name
         %br
-        = f.text_field(:last_name, class: "half-field", placeholder: "例）山田")
-        = f.text_field(:first_name, class: "half-field", placeholder: "例）太郎")
+        .devise-edit__body__half
+          = f.text_field(:last_name, class: "half-field", placeholder: "例）山田")
+          = f.text_field(:first_name, class: "half-field", placeholder: "例）太郎")
         %br
         %br
         %label.label name kana
         %br
-        = f.text_field(:last_name_kana, class: "half-field", placeholder: "例）ヤマダ")
-        = f.text_field(:first_name_kana, class: "half-field", placeholder: "例）タロウ")
+        .devise-edit__body__half
+          = f.text_field(:last_name_kana, class: "half-field", placeholder: "例）ヤマダ")
+          = f.text_field(:first_name_kana, class: "half-field", placeholder: "例）タロウ")
         %br
         %br
         %label.label phone number
@@ -44,8 +46,9 @@
         %br
         %label.label height, weight
         %br
-        = f.text_field(:height, class: "half-field", placeholder: "身長 cm")
-        = f.text_field(:weight, class: "half-field", placeholder: "体重 kg")
+        .devise-edit__body__half
+          = f.text_field(:height, class: "half-field", placeholder: "身長 cm")
+          = f.text_field(:weight, class: "half-field", placeholder: "体重 kg")
         %br
         %br
         = f.label :current_password
