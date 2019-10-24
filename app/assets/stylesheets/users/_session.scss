@@ -44,7 +44,7 @@
     }
     .full-field {
       @include input-form-field;
-      width: 300px;
+      width: 100%;
     }
     &__login {
       @include submit-black-button;
