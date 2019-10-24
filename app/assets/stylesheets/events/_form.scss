@@ -40,25 +40,27 @@
   }
 }
 
-#event_start_date_1i.year {
+#event_start_date_1i.year, #event_start_date_3i.day{
   @include date-field;
-  width: 80px;
+  width: 115px;
 }
 
 #event_start_date_2i.month {
   @include date-field;
-  width: 120px;
+  width: 159px;
 }
 
-#event_start_date_3i.day {
-  @include date-field;
-  width: 80px;
+#event_start_date_2i.month, #event_start_date_3i.day {
+  margin: 0 0 0 10px;
 }
 
 .event-form__field {
   &__date {
     h1 {
       font-size: 14px;
+    }
+    &__form {
+      width: 100%;
     }
   }
   &__food {
@@ -68,10 +70,12 @@
     }
     .event_foods {
       @include input-form-field;
-      width: 270px;
+      width: 100%;
+      box-sizing: border-box;
     }
     #food-search-result {
       font-size: 12px;
+      margin: 8px 0 0;
     }
   }
   &__result {
@@ -81,8 +85,9 @@
     }
   }
   .event-food.clearfix {
-    width: 270px;
-    margin: 10px 5px;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 5px;
     font-size: 12px;
     &:after {
       content: "";
@@ -91,15 +96,18 @@
     }
     .event-food__name {
       float: left;
+      // box-sizing: border-box;
     }
     .food-search-add {
       float: right;
+      // box-sizing: border-box;
       color: #708090;
     }
   }
   .event-form__field__add.clearfix {
-    width: 270px;
-    margin: 10px 5px;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 5px;
     font-size: 12px;
     &:after {
       content: "";
