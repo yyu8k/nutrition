@@ -64,6 +64,7 @@
     .full-field {
       @include input-form-field;
       width: 100%;
+      box-sizing: border-box;
     }
     .label {
       padding: 20px 0 0;
