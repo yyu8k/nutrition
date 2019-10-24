@@ -21,14 +21,16 @@
       %br
       %label.label name
       %br
-      = f.text_field(:last_name, class: "half-field", placeholder: "例）山田")
-      = f.text_field(:first_name, class: "half-field", placeholder: "例）太郎")
+      .devise-registration__body__half
+        = f.text_field(:last_name, class: "half-field", placeholder: "例）山田")
+        = f.text_field(:first_name, class: "half-field", placeholder: "例）太郎")
       %br
       %br
       %label.label name kana
       %br
-      = f.text_field(:last_name_kana, class: "half-field", placeholder: "例）ヤマダ")
-      = f.text_field(:first_name_kana, class: "half-field", placeholder: "例）タロウ")
+      .devise-registration__body__half
+        = f.text_field(:last_name_kana, class: "half-field", placeholder: "例）ヤマダ")
+        = f.text_field(:first_name_kana, class: "half-field", placeholder: "例）タロウ")
       %br
       %br
       %label.label phone number
@@ -38,7 +40,8 @@
       %br
       %label.label birthday
       %br
-      = raw sprintf(f.date_select(:birthday, { use_month_numbers: true, class: "select", start_year: 1950, end_year: (Time.now.year), prompt: "--", with_css_classes: true}))
+      .devise-registration__body__three
+        = raw sprintf(f.date_select(:birthday, { use_month_numbers: true, class: "select", start_year: 1950, end_year: (Time.now.year), prompt: "--", with_css_classes: true}))
       %br
       %br
       %label.label sex
@@ -48,8 +51,9 @@
       %br
       %label.label height, weight
       %br
-      = f.text_field(:height, class: "half-field", placeholder: "身長 cm")
-      = f.text_field(:weight, class: "half-field", placeholder: "体重 kg")
+      .devise-registration__body__half
+        = f.text_field(:height, class: "half-field", placeholder: "身長 cm")
+        = f.text_field(:weight, class: "half-field", placeholder: "体重 kg")
       .devise-registration__body__submit
         = f.submit "Sign up"
   .devise-registration__footer

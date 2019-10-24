@@ -10,7 +10,8 @@
   .event-form__field
     .event-form__field__date
       %h1 Date
-      = f.date_select(:start_date, {with_css_classes: true})
+      .event-form__field__date__form
+        = f.date_select(:start_date, {with_css_classes: true})
     .event-form__field__food
       %h1 Food
       = f.text_field(:food_id, class: "event_foods", id: "food-search-field", local: true, prompt: true, value: "")
