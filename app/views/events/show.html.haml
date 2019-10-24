@@ -2,6 +2,7 @@
   .events-show__date
     = @event.start_date.strftime("%Y/%-m/%-d")
     = link_to "edit", edit_event_path, class: "events-edit"
+    = link_to 'delete', event_path(@event.id), class: "events-delete", method: :delete
   .events-show__food
     - @event.foods.each do |food|
       .events-show__food__name
