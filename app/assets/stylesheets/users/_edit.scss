@@ -41,7 +41,8 @@
 }
 
 .devise-edit {
-  max-width: 700px;
+  width: 700px;
+  margin: 0 auto;
   &__header {
     display: flex;
     padding: 100px 16px 32px;
