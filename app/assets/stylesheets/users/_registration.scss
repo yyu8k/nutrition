@@ -20,6 +20,8 @@
   border: 1px solid #ccc;
   background-color: #fff;
   border-radius: 0;
+  width: 30%;
+  box-sizing: border-box;
 }
 
 @mixin submit-black-button {
@@ -56,6 +58,10 @@
     &__half {
       width: 100%;
     }
+    &__three {
+      width: 100%;
+      // box-sizing: border-box;
+    }
     .japanese {
       size: 60px;
     }
@@ -75,17 +81,11 @@
     #user_first_name, #user_first_name_kana, #user_weight {
       margin: 0 0 0 10px;
     }
-    #user_birthday_1i.year {
+    #user_birthday_1i.year, #user_birthday_2i.month, #user_birthday_3i.day {
       @include date-field;
-      width: 80px;
     }
-    #user_birthday_2i.month {
-      @include date-field;
-      width: 120px;
-    }
-    #user_birthday_3i.day {
-      @include date-field;
-      width: 80px;
+    #user_birthday_2i.month, #user_birthday_3i.day {
+      margin: 0 0 0 10px;
     }
     &__submit {
       @include submit-black-button;
