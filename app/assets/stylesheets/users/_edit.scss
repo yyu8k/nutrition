@@ -64,6 +64,9 @@
     margin: 40px 100px 100px;
     padding: 0 40px;
     text-align: left;
+    &__half {
+      width: 100%;
+    }
     .half-field {
       @include input-form-field;
       width: 180px;
