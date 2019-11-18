@@ -7879,6 +7879,7 @@ foods = Food.create!([
     kcal: '13',
     protein: '2',
     lipid: '0',
+    carbo: '2',
   },
   {
     name: 'なすの煮びたし',
