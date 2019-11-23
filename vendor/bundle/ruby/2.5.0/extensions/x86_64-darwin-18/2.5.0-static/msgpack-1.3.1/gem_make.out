@@ -1,5 +1,5 @@
 current directory: /Users/yukaikeda/projects/nutrition/vendor/bundle/ruby/2.5.0/gems/msgpack-1.3.1/ext/msgpack
-/Users/yukaikeda/.rbenv/versions/2.5.1/bin/ruby -r ./siteconf20191103-17439-1gktk4y.rb extconf.rb
+/Users/yukaikeda/.rbenv/versions/2.5.1/bin/ruby -r ./siteconf20191123-40155-byfr9q.rb extconf.rb
 checking for ruby/st.h... yes
 checking for st.h... yes
 checking for rb_str_replace() in ruby.h... yes
@@ -36,4 +36,4 @@ linking shared-object msgpack/msgpack.bundle
 
 current directory: /Users/yukaikeda/projects/nutrition/vendor/bundle/ruby/2.5.0/gems/msgpack-1.3.1/ext/msgpack
 make "DESTDIR=" install
-/usr/bin/install -c -m 0755 msgpack.bundle ./.gem.20191103-17439-1bgr6ca/msgpack
+/usr/bin/install -c -m 0755 msgpack.bundle ./.gem.20191123-40155-vh0cnw/msgpack

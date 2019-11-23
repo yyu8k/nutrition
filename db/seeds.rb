@@ -961,7 +961,6 @@ foods = Food.create!([
     name: 'おからパン',
     kcal: '314',
     protein: '10',
-    lipid: '7',
     lipid: '3',
     carbo: '61',
   },
