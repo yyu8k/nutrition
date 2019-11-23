@@ -16399,5 +16399,19 @@ foods = Food.create!([
     protein: '53',
     lipid: '33',
     carbo: '147',
+  },
+  {
+    name: 'おでん（がんも）',
+    kcal: '83',
+    protein: '5',
+    lipid: '5',
+    carbo: '3',
+  },
+  {
+    name: 'おでん（タコ串）',
+    kcal: '40',
+    protein: '6',
+    lipid: '0',
+    carbo: '3',
   }
 ])
