@@ -16357,5 +16357,47 @@ foods = Food.create!([
     protein: '32',
     lipid: '6',
     carbo: '12',
+  },
+  {
+    name: 'イタリアンコース料理',
+    kcal: '1241',
+    protein: '39',
+    lipid: '58',
+    carbo: '134',
+  },
+  {
+    name: '懐石料理',
+    kcal: '868',
+    protein: '62',
+    lipid: '19',
+    carbo: '103',
+  },
+  {
+    name: '中華コース料理',
+    kcal: '1129',
+    protein: '50',
+    lipid: '36',
+    carbo: '143',
+  },
+  {
+    name: '鍋料理（コース）',
+    kcal: '903',
+    protein: '61',
+    lipid: '33',
+    carbo: '81',
+  },
+  {
+    name: 'フレンチコース料理',
+    kcal: '874',
+    protein: '55',
+    lipid: '46',
+    carbo: '57',
+  },
+  {
+    name: '和食コース料理',
+    kcal: '1116',
+    protein: '53',
+    lipid: '33',
+    carbo: '147',
   }
 ])
