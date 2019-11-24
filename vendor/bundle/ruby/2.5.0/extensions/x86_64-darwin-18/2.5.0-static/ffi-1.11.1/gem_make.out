@@ -1,5 +1,5 @@
 current directory: /Users/yukaikeda/projects/nutrition/vendor/bundle/ruby/2.5.0/gems/ffi-1.11.1/ext/ffi_c
-/Users/yukaikeda/.rbenv/versions/2.5.1/bin/ruby -r ./siteconf20191103-17439-1qp2vvg.rb extconf.rb
+/Users/yukaikeda/.rbenv/versions/2.5.1/bin/ruby -r ./siteconf20191123-40155-1v5d3r5.rb extconf.rb
 checking for ffi.h... no
 checking for ffi.h in /usr/local/include,/usr/include/ffi... no
 checking for shlwapi.h... no
@@ -125,4 +125,4 @@ compiling Types.c
 compiling Variadic.c
 compiling ffi.c
 linking shared-object ffi_c.bundle
-/usr/bin/install -c -m 0755 ffi_c.bundle ./.gem.20191103-17439-zv9qxi
+/usr/bin/install -c -m 0755 ffi_c.bundle ./.gem.20191123-40155-1hd0nb9

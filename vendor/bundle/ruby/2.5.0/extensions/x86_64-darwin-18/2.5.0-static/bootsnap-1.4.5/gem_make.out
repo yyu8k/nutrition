@@ -1,5 +1,5 @@
 current directory: /Users/yukaikeda/projects/nutrition/vendor/bundle/ruby/2.5.0/gems/bootsnap-1.4.5/ext/bootsnap
-/Users/yukaikeda/.rbenv/versions/2.5.1/bin/ruby -r ./siteconf20191103-17439-7v83fk.rb extconf.rb
+/Users/yukaikeda/.rbenv/versions/2.5.1/bin/ruby -r ./siteconf20191123-40155-ixkf1p.rb extconf.rb
 creating Makefile
 
 current directory: /Users/yukaikeda/projects/nutrition/vendor/bundle/ruby/2.5.0/gems/bootsnap-1.4.5/ext/bootsnap
@@ -12,4 +12,4 @@ linking shared-object bootsnap/bootsnap.bundle
 
 current directory: /Users/yukaikeda/projects/nutrition/vendor/bundle/ruby/2.5.0/gems/bootsnap-1.4.5/ext/bootsnap
 make "DESTDIR=" install
-/usr/bin/install -c -m 0755 bootsnap.bundle ./.gem.20191103-17439-1fv55lq/bootsnap
+/usr/bin/install -c -m 0755 bootsnap.bundle ./.gem.20191123-40155-1ela23b/bootsnap
