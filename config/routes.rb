@@ -12,4 +12,5 @@ Rails.application.routes.draw do
     end
   end
   resources :tweets, only: [:index]
+  get 'inquiry' => 'inquiry#index'              # 入力画面
 end
