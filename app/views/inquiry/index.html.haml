@@ -2,3 +2,26 @@
   .inquiry-index-page__header
     %h2 Contact
   .inquiry-index-page__body
+    = form_with model: @inquiry, url: inquiry_confirm_path, local: true, class: "registration_form" do |f|
+      - if @inquiry.errors.any?
+        .alert.alert-danger{:role => "alert"}
+          %strong 入力内容にエラーがあります
+          %ul
+            - @inquiry.errors.each do |attr, msg|
+              %li= msg
+      %table.table
+        %label.label name
+        %br
+        = f.text_field(:name, class: "full-field", placeholder: "ハイフンなし")
+        %br
+        %br
+        %labe.label email
+        %br
+        = f.email_field(:email, class: "full-field", placeholder: "PC・携帯どちらでも可")
+        %br
+        %br
+        %label.label message
+        %br
+        = f.text_area(:message, class: "full-field", placeholder: "PC・携帯どちらでも可")
+      .inquiry-index-page__body__submit
+      = f.submit 'confirmation'
