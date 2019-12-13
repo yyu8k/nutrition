@@ -1,11 +1,20 @@
 .contacts_new
   .contacts_new__header
+    %h2 Contacts
   .contacts_new__body
     = form_with model: @contacts, local: true, class: "contacts_new_form" do |f|
-      .form-group
-        = f.label :email, '返信先メールアドレス'
-        = f.text_field :email, class: 'form-control'
-      .form-group
-        = f.label :message, 'お問い合わせ内容'
-        = f.text_area :message, size: '10x10', class: 'form-control'
-      = f.submit '送信'
+      %label.label name
+      %br
+      = f.text_field(:name, class: "full-field")
+      %br
+      %br
+      %label.label email
+      %br
+      = f.email_field(:email, class: "full-field")
+      %br
+      %br
+      %label.label message
+      %br
+      = f.text_area(:last_name, class: "contacts-message")
+      .contacts_new__body__submit
+        = f.submit 'send'
