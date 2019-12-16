@@ -1,6 +1,5 @@
 Rails.application.routes.draw do
-  get 'contacts/new'
-  get 'contacts/create'
+  resources :contacts
   devise_for :users, controllers: {
     registrations: 'users/registrations',
     sessions: 'users/sessions'
