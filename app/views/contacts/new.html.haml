@@ -1,0 +1,20 @@
+.contacts_new
+  .contacts_new__header
+    %h2 Contacts
+  .contacts_new__body
+    = form_with model: @contact, local: true, class: "contacts_new_form" do |f|
+      %label.label name
+      %br
+      = f.text_field(:name, class: "full-field")
+      %br
+      %br
+      %label.label email
+      %br
+      = f.email_field(:email, class: "full-field")
+      %br
+      %br
+      %label.label message
+      %br
+      = f.text_area(:last_name, class: "contacts-message")
+      .contacts_new__body__submit
+        = f.submit 'send'
