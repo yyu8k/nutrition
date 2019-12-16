@@ -2,7 +2,7 @@
   .contacts_new__header
     %h2 Contacts
   .contacts_new__body
-    = form_with model: @contacts, local: true, class: "contacts_new_form" do |f|
+    = form_with model: @contact, local: true, class: "contacts_new_form" do |f|
       %label.label name
       %br
       = f.text_field(:name, class: "full-field")
