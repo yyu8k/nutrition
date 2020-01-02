@@ -4,7 +4,23 @@
     = link_to "edit", edit_event_path, class: "events-edit"
     = link_to 'delete', event_path(@event.id), class: "events-delete", method: :delete
   .events-show__food
+    - @sum = 0
     - @event.foods.each do |food|
       .events-show__food__name
       = food.name
-      %br
+      - @sum += food.kcal
+  .events-show__sum
+    本日は #{@sum}kcal 摂取されました。
+    %br
+    - @sum = 0
+    - @event.foods.each do |food|
+      - @sum += food.protein
+    タンパク質 #{@sum}&emsp;
+    - @sum = 0
+    - @event.foods.each do |food|
+      - @sum += food.lipid
+    脂質 #{@sum}&emsp;
+    - @sum = 0
+    - @event.foods.each do |food|
+      - @sum += food.carbo
+    糖質(炭水化物) #{@sum}
