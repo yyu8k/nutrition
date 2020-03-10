@@ -44,7 +44,7 @@
         = raw sprintf(f.date_select(:birthday, { use_month_numbers: true, class: "select", start_year: 1950, end_year: (Time.now.year), prompt: "--", with_css_classes: true}))
       %br
       %br
-      %label.label sex
+      %label.label gender
       %br
       = f.select(:sex, [["男性", "male"], ["女性", "female"]], {prompt: "--", with_css_classes: true}, class: "full-field")
       %br
