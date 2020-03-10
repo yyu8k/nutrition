@@ -23,12 +23,16 @@
       border-radius: 5px;
     }
     .events-edit {
-      padding: 3px 30px;
+      padding: 3px 20px;
       right: 0;
+      width: 30px;
+      text-align: center;
     }
     .events-delete {
-      padding: 3px 24px;
+      padding: 3px 20px;
       right: 95px;
+      width: 30px;
+      text-align: center;
     }
     a:hover {
       opacity: 0.7;
