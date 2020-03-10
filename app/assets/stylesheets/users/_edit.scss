@@ -1,8 +1,10 @@
 @mixin input-form-field {
+  font-size: 16px;
+  height: 60px;
+  color: #333;
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
-  height: 48px;
   margin: 5px 0 0;
   padding: 0 10px;
   border: 1px solid #ccc;
@@ -14,7 +16,7 @@
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
-  height: 48px;
+  height: 60px;
   margin: 5px 0 0;
   padding: 0 10px;
   border: 1px solid #ccc;
@@ -26,25 +28,31 @@
 
 @mixin submit-black-button {
   text-align: center;
-  padding: 72px 0 0;
+  margin: 60px 0 0;
   input {
     background-color: transparent;
     border: none;
     cursor: pointer;
     outline: none;
-    padding: 0;
+    padding: 10px 20px;
     appearance: none;
-    width: 100%;
-    width: 100%;
     box-sizing: border-box;
-    background-color: black;
+    background-color: white;
+    color: #333;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 200;
+    border: solid 1px #333;
+    transition: all 0.3s ease 0s;
+  }
+  input:hover {
+    background-color: #333;
     color: white;
-    height: 48px;
-    font-size: 16px;
   }
 }
 
 .devise-edit {
+  color: #333;
   width: 700px;
   margin: 0 auto;
   &__header {
@@ -52,11 +60,18 @@
     margin: 100px 16px 32px;
     justify-content: center;
     h2 {
+      font-size: 45px;
+      font-style: normal;
+      font-weight: 200;
+      font-family: neue-haas-unica, sans-serif;
       margin: 0;
+      margin-right: 10px;
     }
     h3 {
-      font-size: 24px;
-      padding-left: 10px;
+      font-size: 45px;
+      font-style: normal;
+      font-weight: 200;
+      font-family: neue-haas-unica, sans-serif;
       margin: 0;
     }
   }
@@ -69,7 +84,8 @@
     }
     .half-field {
       @include input-form-field;
-      width: 180px;
+      width: 202.3px;
+      box-sizing: border-box;
     }
     .full-field {
       @include input-form-field;
@@ -84,8 +100,10 @@
       width: 180px;
     }
     label {
-      padding: 20px 0 0;
-      font-weight: bold;
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 200;
+      font-family: neue-haas-unica, sans-serif;
     }
     i {
       font-size: 13px;
