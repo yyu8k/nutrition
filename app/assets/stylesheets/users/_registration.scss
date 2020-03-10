@@ -2,7 +2,6 @@
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
-  height: 60px;
   margin: 5px 0 0;
   padding: 0 10px;
   border: 1px solid #ccc;
@@ -17,7 +16,7 @@
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
-  height: 48px;
+  height: 60px;
   margin: 5px 0 0;
   padding: 0 10px;
   border: 1px solid #ccc;
@@ -77,6 +76,7 @@
     }
     &__three {
       width: 430px;
+      height: 58px;
       box-sizing: border-box;
     }
     .japanese {
@@ -85,11 +85,13 @@
     .half-field {
       @include input-form-field;
       width: 179.5px;
+      height: 58px;
     }
     .full-field {
       @include input-form-field;
       width: 100%;
       box-sizing: border-box;
+      height: 60px;
     }
     .label {
       padding: 20px 0 0;
