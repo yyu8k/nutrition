@@ -1,11 +1,27 @@
 .events-edit {
-  max-width: 700px;
+  color: #333;
+  font-style: normal;
+  width: 700px;
+  margin: 0 auto;
   &__header {
-    padding: 100px 16px 32px;
+    margin: 100px 16px 32px;
     text-align: center;
+    h1 {
+      font-size: 45px;
+      font-style: normal;
+      font-weight: 200;
+      font-family: neue-haas-unica, sans-serif;
+    }
   }
   &__body {
-    padding: 40px 100px;
+    margin: 40px 100px;
+    padding: 0 40px;
     text-align: left;
+    h1 {
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 200;
+    font-family: neue-haas-unica, sans-serif;
+    }
   }
 }
