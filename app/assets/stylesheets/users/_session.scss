@@ -1,4 +1,6 @@
 @mixin input-form-field {
+  font-size: 16px;
+  color: #333;
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
@@ -7,7 +9,6 @@
   border: 1px solid #ccc;
   background-color: #fff;
   border-radius: 0;
-  font-size: 18px;
   font-weight: 200;
   height: 60px;
   font-family: neue-haas-unica, sans-serif;
@@ -59,7 +60,9 @@
     text-align: left;
     .label {
       padding: 20px 0 0;
-      font-weight: bold;
+      font-weight: 200;
+      font-style: normal;
+      font-family: neue-haas-unica, sans-serif;
     }
     .full-field {
       @include input-form-field;
