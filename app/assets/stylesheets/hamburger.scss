@@ -6,10 +6,12 @@
   top: 0;
   width: 100%;
   height: 40px;
-  background-color: black;
+  background-color: #333;
   box-shadow: 0 2px 6px rgba(0,0,0,.16);
 }
 .global-nav {
+  font-weight: 100;
+  font-family: 游明朝,"Yu Mincho",YuMincho,"Hiragino Mincho ProN","Hiragino Mincho Pro",HGS明朝E,メイリオ,Meiryo,serif;
   position: fixed;
   right: -320px; /* これで隠れる */
   top: 0;
@@ -29,15 +31,20 @@
       padding: 0 14px;
     }
     &__item a {
-      font-size: 14px;
+      font-weight: 200;
+      font-style: normal;
+      font-family: neue-haas-unica, sans-serif;
+      font-size: 16px;
       display: block;
       padding: 8px 0;
       border-bottom: 1px solid #eee;
       text-decoration: none;
       color: #111;
+      transition: all 0.3s ease 0s;
     }
     &__item a:hover {
-      background-color: #eee;
+      background-color: #333;
+      color: white;
     }
   }
 }

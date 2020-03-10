@@ -1,20 +1,24 @@
 @mixin input-form-field {
+  font-size: 16px;
+  color: #333;
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
-  height: 48px;
   margin: 5px 0 0;
   padding: 0 10px;
   border: 1px solid #ccc;
   background-color: #fff;
   border-radius: 0;
+  font-weight: 200;
+  height: 60px;
+  font-family: neue-haas-unica, sans-serif;
 }
 
 @mixin date-field {
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
-  height: 48px;
+  height: 60px;
   margin: 5px 0 0;
   padding: 0 10px;
   border: 1px solid #ccc;
@@ -26,31 +30,46 @@
 
 @mixin submit-black-button {
   text-align: center;
-  padding: 72px 0 0;
+  margin: 60px 0 0;
   input {
     background-color: transparent;
     border: none;
     cursor: pointer;
     outline: none;
-    padding: 0;
+    padding: 10px 20px;
     appearance: none;
-    width: 100%;
     box-sizing: border-box;
-    background-color: black;
+    background-color: white;
+    color: #333;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 200;
+    border: solid 1px #333;
+    transition: all 0.3s ease 0s;
+  }
+  input:hover {
+    background-color: #333;
     color: white;
-    height: 48px;
-    font-size: 16px;
   }
 }
 
 .devise-registration {
+  color: #333;
+  font-style: normal;
   width: 700px;
   margin: 0 auto;
   &__header {
-    margin: 100px 16px 32px;
+    margin: 100px 0 60px;
     text-align: center;
+    h2 {
+      font-size: 45px;
+      font-style: normal;
+      font-weight: 200;
+      font-family: neue-haas-unica, sans-serif;
+    }
   }
   &__body {
+    font-size: 20px;
     margin: 40px 100px 100px;
     padding: 0 40px;
     text-align: left;
@@ -58,15 +77,17 @@
       width: 100%;
     }
     &__three {
-      width: 100%;
-      // box-sizing: border-box;
+      width: 430px;
+      height: 58px;
+      box-sizing: border-box;
     }
     .japanese {
       size: 60px;
     }
     .half-field {
       @include input-form-field;
-      width: 180px;
+      width: 201.6px;
+      box-sizing: border-box;
     }
     .full-field {
       @include input-form-field;
@@ -75,7 +96,9 @@
     }
     .label {
       padding: 20px 0 0;
-      font-weight: bold;
+      font-weight: 200;
+      font-style: normal;
+      font-family: neue-haas-unica, sans-serif;
     }
     #user_first_name, #user_first_name_kana, #user_weight {
       margin: 0 0 0 10px;
