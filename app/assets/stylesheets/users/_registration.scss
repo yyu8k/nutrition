@@ -39,21 +39,21 @@
     appearance: none;
     box-sizing: border-box;
     background-color: white;
-    color: #0C1F3B;
+    color: #333;
     font-size: 24px;
     font-style: normal;
     font-weight: 200;
-    border: solid 1px #0C1F3B;
+    border: solid 1px #333;
     transition: all 0.3s ease 0s;
   }
   input:hover {
-    background-color: #0C1F3B;
+    background-color: #333;
     color: white;
   }
 }
 
 .devise-registration {
-  color: #0C1F3B;
+  color: #333;
   font-style: normal;
   width: 700px;
   margin: 0 auto;
@@ -63,8 +63,7 @@
     h2 {
       font-size: 45px;
       font-style: normal;
-      padding: 10px 20px;
-      font-weight: 100 !important;
+      font-weight: 200;
       font-family: neue-haas-unica, sans-serif;
     }
   }
