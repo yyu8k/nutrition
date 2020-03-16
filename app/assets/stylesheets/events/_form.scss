@@ -1,55 +1,52 @@
 @mixin date-field {
   font-size: 16px;
-  color: #333;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
   height: 60px;
+  width: 130px;
   margin: 5px 0 0;
   padding: 0 10px;
-  border: 1px solid #ccc;
   background-color: #fff;
+  border: 1px solid #ccc;
   border-radius: 0;
-  width: 30%;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
   box-sizing: border-box;
 }
 
 @mixin input-form-field {
   font-size: 16px;
   height: 60px;
+  width: 420px;
+  font-size: 16px;
   color: #333;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
   margin: 5px 0 0;
   padding: 0 10px;
-  border: 1px solid #ccc;
   background-color: #fff;
+  font-family: neue-haas-unica, sans-serif;
+  font-weight: 200;
+  border: 1px solid #ccc;
   border-radius: 0;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  box-sizing: border-box;
 }
 
 @mixin submit-black-button {
-  text-align: center;
   margin: 60px 0 0;
+  text-align: center;
   input {
-    background-color: transparent;
-    border: none;
-    cursor: pointer;
-    outline: none;
-    padding: 10px 20px;
-    appearance: none;
-    box-sizing: border-box;
-    background-color: white;
-    color: #333;
+    padding: 10px 50px;
+    color: white;
+    background-color: rgba(0,0,0,0.7);
     font-size: 24px;
-    font-style: normal;
     font-weight: 200;
-    border: solid 1px #333;
     transition: all 0.3s ease 0s;
+    border: solid 1px white;
+    box-sizing: border-box;
   }
   input:hover {
-    background-color: #333;
-    color: white;
+    opacity: 0.7;
   }
 }
 
