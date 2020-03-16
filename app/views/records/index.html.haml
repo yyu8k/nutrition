@@ -1,39 +1,18 @@
--# %h1 Listing records
+.event-index
+  - if user_signed_in?
+    .event-index__#calendar
 
--# %table
--#   %thead
--#     %tr
--#       %th Date
--#       %th
--#       %th
--#       %th
-
--#   %tbody
--#     - @records.each do |record|
--#       %tr
--#         %td= record.date
--#         %td= link_to 'Show', record
--#         %td= link_to 'Edit', edit_record_path(record)
--#         %td= link_to 'Destroy', record, method: :delete, data: { confirm: 'Are you sure?' }
-
--# %br
-
--# = link_to 'New Record', new_record_path
-
-- if user_signed_in?
-  #calendar
-
-- else
-  .top-page
-    .top-page__message
-      .top-page__message__title 健康ダイエット、はじめませんか？
-      .top-page__message__text 
-        %h1 皮膚も、筋肉も、脂肪も、すべて食事が変われば変わります。
-        %h1 あなたの体質を正しく理解して、ダイエットに挑戦しませんか？
-      .top-page__message__link
-        %h2
-          = link_to "登録する", new_user_registration_path
-        %h2
-          = link_to "About us", tweets_path
-        %h2
-          = link_to "Contacts", new_contact_path
+  - else
+    .top-page
+      .top-page__message
+        .top-page__message__title 健康ダイエット、はじめませんか？
+        .top-page__message__text 
+          %h1 皮膚も、筋肉も、脂肪も、すべて食事が変われば変わります。
+          %h1 あなたの体質を正しく理解して、ダイエットに挑戦しませんか？
+        .top-page__message__link
+          %h2
+            = link_to "登録する", new_user_registration_path
+          %h2
+            = link_to "About us", tweets_path
+          %h2
+            = link_to "Contacts", new_contact_path
