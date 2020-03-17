@@ -3,7 +3,7 @@
     .events-show__message__header
       %h5.events-show__message__header__date
         = @event.start_date.strftime("%Y.%-m.%-d")
-      = link_to 'delete', event_path(@event.id), class: "events-show__message__header__delete", method: :delete
+      = link_to 'delete', event_path(@event.id), class: "events-show__message__header__delete", method: :delete, data: { confirm: '削除しますか？' }
       = link_to "edit", edit_event_path, class: "events-show__message__header__edit"
     .events-show__message__food
       - @sum = 0
