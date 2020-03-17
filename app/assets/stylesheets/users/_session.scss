@@ -20,6 +20,7 @@
   margin: 60px 0 0;
   text-align: center;
   input {
+    width: 200px;
     padding: 10px 50px;
     color: white;
     background-color: rgba(0,0,0,0.7);
@@ -74,6 +75,7 @@
     }
     &__login {
       @include submit-black-button;
+      text-align: center;
     }
   }
   &__footer {
