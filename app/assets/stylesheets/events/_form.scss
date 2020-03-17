@@ -1,55 +1,53 @@
 @mixin date-field {
   font-size: 16px;
-  color: #333;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
   height: 60px;
+  width: 130px;
   margin: 5px 0 0;
   padding: 0 10px;
-  border: 1px solid #ccc;
   background-color: #fff;
+  border: 1px solid #ccc;
   border-radius: 0;
-  width: 30%;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
   box-sizing: border-box;
 }
 
 @mixin input-form-field {
   font-size: 16px;
   height: 60px;
+  width: 420px;
+  font-size: 16px;
   color: #333;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
   margin: 5px 0 0;
   padding: 0 10px;
-  border: 1px solid #ccc;
   background-color: #fff;
+  font-family: neue-haas-unica, sans-serif;
+  font-weight: 200;
+  border: 1px solid #ccc;
   border-radius: 0;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  box-sizing: border-box;
 }
 
 @mixin submit-black-button {
-  text-align: center;
   margin: 60px 0 0;
+  text-align: center;
   input {
-    background-color: transparent;
-    border: none;
-    cursor: pointer;
-    outline: none;
-    padding: 10px 20px;
-    appearance: none;
-    box-sizing: border-box;
-    background-color: white;
-    color: #333;
+    width: 200px;
+    padding: 10px 50px;
+    color: white;
+    background-color: rgba(0,0,0,0.7);
     font-size: 24px;
-    font-style: normal;
     font-weight: 200;
-    border: solid 1px #333;
     transition: all 0.3s ease 0s;
+    border: solid 1px white;
+    box-sizing: border-box;
   }
   input:hover {
-    background-color: #333;
-    color: white;
+    opacity: 0.7;
   }
 }
 
@@ -67,17 +65,24 @@
   margin: 0 0 0 10px;
 }
 
+.registration_form {
+  text-align: center;
+}
+
 .event-form__field {
+  text-align: center;
+  display: inline-block;
+  overflow: scroll;
   &__date {
     h1 {
+      padding: 20px 0 0 1px;
       font-size: 16px;
       font-style: normal;
       font-weight: 200;
       font-family: neue-haas-unica, sans-serif;
     }
     &__form {
-      // width: 1000px;
-      // box-sizing: border-box;
+      display: inline-block;
     }
   }
   &__food {
@@ -90,10 +95,10 @@
     }
     .event_foods {
       @include input-form-field;
-      width: 100%;
-      box-sizing: border-box;
     }
     #food-search-result {
+      height: 100%;
+      // background-color: white;
       box-sizing: border-box;
       font-size: 12px;
       margin: 8px 0 0;
@@ -101,6 +106,7 @@
   }
   &__result {
     h1 {
+      color: white;
       font-size: 16px;
       font-style: normal;
       font-weight: 200;
@@ -109,29 +115,34 @@
     }
   }
   .event-food.clearfix {
+    background-color: rgba(0,0,0,0.7);
+    margin-bottom: 5px;
     width: 100%;
     box-sizing: border-box;
-    padding: 5px;
-    font-size: 12px;
+    padding: 15px;
+    font-size: 16px;
     &:after {
       content: "";
       clear: both;
       display: block;
     }
     .event-food__name {
+      font-size: 16px;
+      color: white;
       float: left;
       // box-sizing: border-box;
     }
     .food-search-add {
       float: right;
       // box-sizing: border-box;
-      color: #708090;
+      color: #99e7ff;
     }
   }
   .event-form__field__add.clearfix {
+    color: white;
     width: 100%;
     box-sizing: border-box;
-    padding: 5px;
+    padding: 8px;
     font-size: 12px;
     &:after {
       content: "";
@@ -139,11 +150,13 @@
       display: block;
     }
     .event-food__name {
+      font-size: 16px;
       float: left;
     }
     .food-search-remove {
+      font-size: 16px;
       float: right;
-      color: #8b4513;
+      color: #ff80a2;
     }
   }
 }

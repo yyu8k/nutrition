@@ -25,11 +25,13 @@
         = f.text_field(:last_name, class: "half-field", placeholder: "例）山田")
         = f.text_field(:first_name, class: "half-field", placeholder: "例）太郎")
       %br
+      %br
       %label.label name kana
       %br
       .devise-registration__body__half
         = f.text_field(:last_name_kana, class: "half-field", placeholder: "例）ヤマダ")
         = f.text_field(:first_name_kana, class: "half-field", placeholder: "例）タロウ")
+      %br
       %br
       %label.label phone number
       %br
@@ -40,6 +42,7 @@
       %br
       .devise-registration__body__three
         = raw sprintf(f.date_select(:birthday, { use_month_numbers: true, class: "select", start_year: 1950, end_year: (Time.now.year), prompt: "--", with_css_classes: true}))
+      %br
       %br
       %label.label gender
       %br
@@ -54,4 +57,3 @@
       .devise-registration__body__submit
         = f.submit "Sign up"
   .devise-registration__footer
-    -# = render "devise/shared/links"

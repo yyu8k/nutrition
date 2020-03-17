@@ -23,15 +23,11 @@
 .top-page{
   font-weight: 100;
   font-family: 游明朝,"Yu Mincho",YuMincho,"Hiragino Mincho ProN","Hiragino Mincho Pro",HGS明朝E,メイリオ,Meiryo,serif;
-  background: image-url('trees.jpg');
-  background-size: cover;
   display: flex;
-  height: 100vh;
   &__message {
     text-align: center;
-    // アニメーション設定
-    animation: fadeIn 4s ease 0s 1 normal;
-    -webkit-animation: fadeIn 4s ease 0s 1 normal;
+    animation: fadeIn 4s ease 0s 1 normal;             // アニメーション設定
+    -webkit-animation: fadeIn 4s ease 0s 1 normal;     // アニメーション設定
     color: white;
     &__title {
       font-weight: normal;

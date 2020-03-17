@@ -9,17 +9,21 @@
 
   .event-form__field
     .event-form__field__date
-      %h1 Date
+      %h2{align: "left"} Date
       .event-form__field__date__form
         = f.date_select(:start_date, {with_css_classes: true})
     .event-form__field__food
-      %h1 Food
+      %br
+      %br
+      %h2{align: "left"} Food
       = f.text_field(:food_id, class: "event_foods", id: "food-search-field", local: true, prompt: true, value: "")
       #food-search-result
     .event-form__field__result
-      %h1 Ate
+      %br
+      %br
+      %h2{align: "left"} Ate
     .event-form__field__add.clearfix.js-event-foods
     #event-foods
-
   .event-form__actions
     = f.submit 'Save', class: "events_save"
+  .event-form__footer

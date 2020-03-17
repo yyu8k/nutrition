@@ -38,7 +38,7 @@ $(function () {
 
           $('#calendar').fullCalendar({
               events: '/events.json',
-              eventColor: '#5f9ea0'
+              eventColor: 'white'
           });
       }
   });

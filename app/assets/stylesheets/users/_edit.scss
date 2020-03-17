@@ -1,105 +1,83 @@
 @mixin input-form-field {
   font-size: 16px;
   height: 60px;
+  width: 420px;
+  font-size: 16px;
   color: #333;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
   margin: 5px 0 0;
   padding: 0 10px;
-  border: 1px solid #ccc;
   background-color: #fff;
+  font-family: neue-haas-unica, sans-serif;
+  font-weight: 200;
+  border: 1px solid #ccc;
   border-radius: 0;
-}
-
-@mixin date-field {
+  appearance: none;
   -webkit-appearance: none;
   -moz-appearance: none;
-  appearance: none;
-  height: 60px;
-  margin: 5px 0 0;
-  padding: 0 10px;
-  border: 1px solid #ccc;
-  background-color: #fff;
-  border-radius: 0;
-  width: 30%;
   box-sizing: border-box;
 }
 
 @mixin submit-black-button {
-  text-align: center;
   margin: 60px 0 0;
+  text-align: center;
   input {
-    background-color: transparent;
-    border: none;
-    cursor: pointer;
-    outline: none;
-    padding: 10px 20px;
-    appearance: none;
-    box-sizing: border-box;
-    background-color: white;
-    color: #333;
+    width: 200px;
+    padding: 10px 50px;
+    color: white;
+    background-color: rgba(0,0,0,0.7);
     font-size: 24px;
-    font-style: normal;
     font-weight: 200;
-    border: solid 1px #333;
     transition: all 0.3s ease 0s;
+    border: solid 1px white;
+    box-sizing: border-box;
   }
   input:hover {
-    background-color: #333;
-    color: white;
+    opacity: 0.7;
   }
 }
 
 .devise-edit {
-  color: #333;
-  width: 700px;
+  height: 100vh;
   margin: 0 auto;
+  text-align: center;
+  background: image-url('trees.jpg');
+  background-size: cover;
+  overflow: scroll;
+  color: white;
+  font-style: normal;
   &__header {
-    display: flex;
-    margin: 100px 16px 32px;
-    justify-content: center;
-    h2 {
-      font-size: 45px;
-      font-style: normal;
-      font-weight: 200;
-      font-family: neue-haas-unica, sans-serif;
-      margin: 0;
-      margin-right: 10px;
-    }
-    h3 {
-      font-size: 45px;
-      font-style: normal;
-      font-weight: 200;
-      font-family: neue-haas-unica, sans-serif;
-      margin: 0;
-    }
+    padding: 100px 0 60px;
+    text-align: center;
+    font-size: 60px;
+    color: white;
+    font-weight: 100;
+    font-family: 游明朝,"Yu Mincho",YuMincho,"Hiragino Mincho ProN","Hiragino Mincho Pro",HGS明朝E,メイリオ,Meiryo,serif;
+    font-weight: 200;
+    text-shadow: 0px 0px 2px #000, 2px 2px 3px #000;
   }
   &__body {
-    margin: 40px 100px 100px;
-    padding: 0 40px;
-    text-align: left;
+    margin: 0 auto;
+    font-size: 20px;
+    text-align: center;
+    display: inline-block;
     &__half {
+      display: inline-block;
       width: 100%;
     }
     .half-field {
       @include input-form-field;
-      width: 202.3px;
-      box-sizing: border-box;
+      width: 200px;
     }
     .full-field {
       @include input-form-field;
-      width: 100%;
-      box-sizing: border-box;
-    }
-    #user_first_name, #user_first_name_kana, #user_weight {
-      margin: 0 0 0 10px;
+      width: 404px;
     }
     input {
       @include input-form-field;
       width: 180px;
     }
     label {
+      float: left;
       font-size: 16px;
       font-style: normal;
       font-weight: 200;
@@ -111,5 +89,9 @@
     &__submit {
       @include submit-black-button;
     }
+  }
+  &__footer {
+    height: 60px;
+    width: 100%;
   }
 }
