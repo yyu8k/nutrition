@@ -12,5 +12,5 @@ Rails.application.routes.draw do
       get 'search'
     end
   end
-  resources :tweets, only: [:index]
+  resources :index, only: [:index]
 end
