@@ -5,8 +5,7 @@ Rails.application.routes.draw do
     sessions: 'users/sessions'
   }
   resources :events
-  resources :records
-  root 'records#index'
+  root 'events#index'
   resources :foods do
     collection do
       get 'search'
