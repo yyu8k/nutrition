@@ -49,22 +49,6 @@ ActiveRecord::Schema.define(version: 2019_12_12_104842) do
     t.datetime "updated_at", null: false
   end
 
-  create_table "record_foods", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
-    t.bigint "record_id"
-    t.bigint "food_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.index ["food_id"], name: "index_record_foods_on_food_id"
-    t.index ["record_id"], name: "index_record_foods_on_record_id"
-  end
-
-  create_table "records", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
-    t.integer "user_id"
-    t.date "date"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
   create_table "users", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "email", null: false
     t.string "encrypted_password", null: false
@@ -88,6 +72,4 @@ ActiveRecord::Schema.define(version: 2019_12_12_104842) do
 
   add_foreign_key "event_foods", "events"
   add_foreign_key "event_foods", "foods"
-  add_foreign_key "record_foods", "foods"
-  add_foreign_key "record_foods", "records"
 end
