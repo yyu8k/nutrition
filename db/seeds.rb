@@ -7,7 +7,7 @@ User.create!(
   last_name_kana: 'スダ',
   phone_number: '09012345678',
   birthday: '1993-02-21', 
-  sex: 'male',
+  gender: 'male',
   height: '176',
   weight: '65',
 )

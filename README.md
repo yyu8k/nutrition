@@ -11,7 +11,7 @@
 |encrypted_password|string|null: false|
 |phone_number|integer|unique: true|
 |birthday|date||
-|sex|string|null: false|
+|gender|string|null: false|
 |height|integer|null: false|
 |weight|integer|null: false|
 
