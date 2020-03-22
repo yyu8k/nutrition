@@ -14,7 +14,7 @@ class User < ApplicationRecord
     validates :last_name_kana
     validates :phone_number
     validates :birthday
-    validates :sex
+    validates :gender
     validates :height
     validates :weight
   end
