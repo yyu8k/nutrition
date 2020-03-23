@@ -58,6 +58,8 @@ $(document).on('turbolinks:load', function(){
   });
 
   $('#food-search-result').on('click', '.food-search-add', function() {
+    $("#food-search-result").empty();  // 検索候補を消す
+    $("#food-search-field").val("");   // 追加後、入力欄をリセットする
     $(this).parent().remove();
     var id = $(this).data('food-id');
     var name = $(this).data('food-name');
